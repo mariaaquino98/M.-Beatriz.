@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 2px solid #abfaf3;
+            background-color: #d6a4f8;
+            animation: revelar 2s infinite
+            
+        }
+        .nisao {
+            background-color: #abfaf3;
+            animation: none;
+        }
+        .carlinhas {
+            background-color: #d6a4f8;
+            animation: none;
+        }
+        @keyframes revelar {
+        from{
+            background-color: #d6a4f8;
+        }
+        to{
+            background-color:#abfaf3
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button class="btn">nisao ou carlinhas</button>
+    <script>
+        var btn = document.querySelector(".btn")
+        btn.addEventListener("click", () => {
+            var revelando =  document.querySelector(".box")
+            revelando.classList.remove() 
+            revelando.classList.add("nisao")
+        })
+    </script>
+</body>
+</html>
